@@ -20903,12 +20903,18 @@ in
   emacs28-pgtk = callPackage ../applications/editors/emacs/28-pgtk.nix {
     srcRepo = true; # forces rm -rf .git and addes makeinfo to path
 
+    withImageMagick = true;
+    nativeComp = true;
+    withXwidgets = true;
+    withX = true;
+    withGTK3 = true;
+
     # copy pasted from 27
     libXaw = xorg.libXaw;
     Xaw3d = null;
     gconf = null;
     alsaLib = null;
-    imagemagick = null;
+
     acl = null;
     gpm = null;
 

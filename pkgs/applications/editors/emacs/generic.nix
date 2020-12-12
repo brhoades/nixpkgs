@@ -115,6 +115,11 @@ in stdenv.mkDerivation {
   configureFlags = [
     "--disable-build-details" # for a (more) reproducible build
     "--with-modules"
+    "--with-dbus"
+    # https://github.com/A6GibKm/emacs-pgtk-nativecomp-copr/blob/master/emacs.spec#L245
+    "--with-pgtk"
+    # below "--with-nativecomp"
+    "--enable-link-time-optimzation"
   ] ++
     (lib.optional stdenv.isDarwin
       (lib.withFeature withNS "ns")) ++
