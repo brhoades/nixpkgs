@@ -20895,11 +20895,27 @@ in
 
   elvis = callPackage ../applications/editors/elvis { };
 
-  emacs = emacs27;
-  emacsPackages = emacs27Packages;
-  emacs-nox = emacs27-nox;
-  emacsWithPackages = emacsPackages.emacsWithPackages;
+  emacs = emacs28-pgtk;
+  # emacsPackages = emacs27Packages;
+  # emacs-nox = emacs27-nox;
+  # emacsWithPackages = emacsPackages.emacsWithPackages;
 
+  emacs28-pgtk = callPackage ../applications/editors/emacs/28-pgtk.nix {
+    srcRepo = true; # forces rm -rf .git and addes makeinfo to path
+
+    # copy pasted from 27
+    libXaw = xorg.libXaw;
+    Xaw3d = null;
+    gconf = null;
+    alsaLib = null;
+    imagemagick = null;
+    acl = null;
+    gpm = null;
+
+    inherit (darwin.apple_sdk.frameworks) AppKit GSS ImageIO;
+  };
+
+  /*
   emacs27 = callPackage ../applications/editors/emacs/27.nix {
     # use override to enable additional features
     libXaw = xorg.libXaw;
@@ -20944,6 +20960,7 @@ in
       ImageCaptureCore GSS ImageIO;
     stdenv = if stdenv.cc.isClang then llvmPackages_6.stdenv else stdenv;
   };
+  */
 
   emacsPackagesFor = emacs: import ./emacs-packages.nix {
     inherit lib newScope stdenv pkgs;

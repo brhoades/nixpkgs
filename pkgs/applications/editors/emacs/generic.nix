@@ -1,17 +1,19 @@
 {
   version
-  , sha256
+  , src
   , versionModifier ? ""
   , pname ? "emacs"
   , name ? "emacs-${version}${versionModifier}"
   , patches ? [ ]
 }:
-{ stdenv, lib, fetchurl, fetchpatch, ncurses, xlibsWrapper, libXaw, libXpm
+{ stdenv, lib, fetchurl, fetchFromGitHub, fetchpatch, ncurses, xlibsWrapper, libXaw, libXpm
 , Xaw3d, libXcursor,  pkgconfig, gettext, libXft, dbus, libpng, libjpeg, libungif
 , libtiff, librsvg, gconf, libxml2, imagemagick, gnutls, libselinux
 , alsaLib, cairo, acl, gpm, AppKit, GSS, ImageIO, m17n_lib, libotf
 , jansson, harfbuzz
 , libgccjit, targetPlatform, makeWrapper # native-comp params
+# emacs 28
+, autoconf
 , systemd ? null
 , withX ? !stdenv.isDarwin
 , withNS ? stdenv.isDarwin
@@ -44,11 +46,7 @@ let
 
 in stdenv.mkDerivation {
   inherit pname version patches;
-
-  src = fetchurl {
-    url = "mirror://gnu/emacs/${name}.tar.xz";
-    inherit sha256;
-  };
+  src = fetchFromGitHub src;
 
   enableParallelBuilding = true;
 
@@ -92,7 +90,7 @@ in stdenv.mkDerivation {
 
   LIBRARY_PATH = if nativeComp then "${lib.getLib stdenv.cc.libc}/lib" else "";
 
-  nativeBuildInputs = [ pkgconfig makeWrapper ]
+  nativeBuildInputs = [ pkgconfig makeWrapper autoconf ]
     ++ lib.optionals srcRepo [ autoreconfHook texinfo ]
     ++ lib.optional (withX && (withGTK3 || withXwidgets)) wrapGAppsHook;
 
