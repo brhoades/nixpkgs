@@ -5218,6 +5218,8 @@ in
 
   lvmsync = callPackage ../tools/backup/lvmsync { };
 
+  kbld = callPackage ../tools/networking/kbld {};
+
   kdbg = libsForQt5.callPackage ../development/tools/misc/kdbg { };
 
   kippo = callPackage ../servers/kippo { };
