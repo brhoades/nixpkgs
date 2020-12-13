@@ -118,8 +118,9 @@ in stdenv.mkDerivation {
     "--with-dbus"
     # https://github.com/A6GibKm/emacs-pgtk-nativecomp-copr/blob/master/emacs.spec#L245
     "--with-pgtk"
-    # below "--with-nativecomp"
-    "--enable-link-time-optimzation"
+    # below: "--with-nativecomp"
+    # debugging input lag
+    # "--enable-link-time-optimzation"
   ] ++
     (lib.optional stdenv.isDarwin
       (lib.withFeature withNS "ns")) ++
