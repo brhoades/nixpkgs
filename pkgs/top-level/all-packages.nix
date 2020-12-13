@@ -5220,6 +5220,8 @@ in
 
   kapp = callPackage ../tools/networking/kapp {};
 
+  kbld = callPackage ../tools/networking/kbld {};
+
   kdbg = libsForQt5.callPackage ../development/tools/misc/kdbg { };
 
   kippo = callPackage ../servers/kippo { };
