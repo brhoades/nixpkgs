@@ -2,7 +2,7 @@
 # Do not edit!
 
 {
-  version = "2021.1.0";
+  version = "2021.1.1";
   components = {
     "abode" = ps: with ps; [ abodepy ];
     "accuweather" = ps: with ps; [ accuweather ];
@@ -11,7 +11,7 @@
     "actiontec" = ps: with ps; [ ];
     "adguard" = ps: with ps; [ adguardhome ];
     "ads" = ps: with ps; [ pyads ];
-    "advantage_air" = ps: with ps; [ advantage_air ];
+    "advantage_air" = ps: with ps; [ advantage-air ];
     "aftership" = ps: with ps; [ pyaftership ];
     "agent_dvr" = ps: with ps; [ ]; # missing inputs: agent-py
     "air_quality" = ps: with ps; [ ];
@@ -328,7 +328,7 @@
     "growatt_server" = ps: with ps; [ ]; # missing inputs: growattServer
     "gstreamer" = ps: with ps; [ ]; # missing inputs: gstreamer-player
     "gtfs" = ps: with ps; [ ]; # missing inputs: pygtfs
-    "guardian" = ps: with ps; [ ]; # missing inputs: aioguardian
+    "guardian" = ps: with ps; [ aioguardian ];
     "habitica" = ps: with ps; [ ]; # missing inputs: habitipy
     "hangouts" = ps: with ps; [ ]; # missing inputs: hangups
     "harman_kardon_avr" = ps: with ps; [ ]; # missing inputs: hkavr
@@ -398,7 +398,7 @@
     "iperf3" = ps: with ps; [ ]; # missing inputs: iperf3
     "ipma" = ps: with ps; [ ]; # missing inputs: pyipma
     "ipp" = ps: with ps; [ pyipp ];
-    "iqvia" = ps: with ps; [ numpy ]; # missing inputs: pyiqvia
+    "iqvia" = ps: with ps; [ numpy pyiqvia ];
     "irish_rail_transport" = ps: with ps; [ ]; # missing inputs: pyirishrail
     "islamic_prayer_times" = ps: with ps; [ ]; # missing inputs: prayer_times_calculator
     "iss" = ps: with ps; [ ]; # missing inputs: pyiss
@@ -827,8 +827,8 @@
     "telnet" = ps: with ps; [ ];
     "temper" = ps: with ps; [ ]; # missing inputs: temperusb
     "template" = ps: with ps; [ ];
-    "tensorflow" = ps: with ps; [ numpy pillow tensorflow-build_2 ]; # missing inputs: pycocotools tf-models-official
-    "tesla" = ps: with ps; [ ]; # missing inputs: teslajsonpy
+    "tensorflow" = ps: with ps; [ numpy pillow tensorflow ]; # missing inputs: pycocotools tf-models-official
+    "tesla" = ps: with ps; [ teslajsonpy ];
     "tfiac" = ps: with ps; [ ]; # missing inputs: pytfiac
     "thermoworks_smoke" = ps: with ps; [ stringcase ]; # missing inputs: thermoworks_smoke
     "thethingsnetwork" = ps: with ps; [ ];
@@ -875,7 +875,7 @@
     "uk_transport" = ps: with ps; [ ];
     "unifi" = ps: with ps; [ aiounifi ];
     "unifi_direct" = ps: with ps; [ pexpect ];
-    "unifiled" = ps: with ps; [ ]; # missing inputs: unifiled
+    "unifiled" = ps: with ps; [ unifiled ];
     "universal" = ps: with ps; [ ];
     "upb" = ps: with ps; [ ]; # missing inputs: upb_lib
     "upc_connect" = ps: with ps; [ connect-box ];

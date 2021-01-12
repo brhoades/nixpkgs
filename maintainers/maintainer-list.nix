@@ -4666,6 +4666,12 @@
     githubId = 494012;
     name = "Kevin Cox";
   };
+  kevingriffin = {
+    email = "me@kevin.jp";
+    github = "kevingriffin";
+    githubId = 209729;
+    name = "Kevin Griffin";
+  };
   kfollesdal = {
     email = "kfollesdal@gmail.com";
     github = "kfollesdal";
@@ -5490,6 +5496,12 @@
     githubId = 346094;
     name = "Michael Alyn Miller";
   };
+  manojkarthick = {
+    email = "smanojkarthick@gmail.com";
+    github = "manojkarthick";
+    githubId = 7802795;
+    name = "Manoj Karthick";
+  };
   manveru = {
     email = "m.fellinger@gmail.com";
     github = "manveru";
@@ -5689,6 +5701,12 @@
     github = "mbrgm";
     githubId = 2971615;
     name = "Marius Bergmann";
+  };
+  mcaju = {
+    email = "cajum.bugs@yandex.com";
+    github = "CajuM";
+    githubId = 10420834;
+    name = "Mihai-Drosi Caju";
   };
   mcbeth = {
     email = "mcbeth@broggs.org";
@@ -6391,6 +6409,12 @@
     githubId = 364510;
     name = "Tobias Geerinckx-Rice";
   };
+  ndl = {
+    email = "ndl@endl.ch";
+    github = "ndl";
+    githubId = 137805;
+    name = "Alexander Tsvyashchenko";
+  };
   neeasade = {
     email = "nathanisom27@gmail.com";
     github = "neeasade";
@@ -6991,6 +7015,12 @@
     githubId = 28323;
     name = "Peter Simons";
   };
+  petterstorvik = {
+    email = "petterstorvik@gmail.com";
+    github = "storvik";
+    githubId = 3438604;
+    name = "Petter Storvik";
+  };
   philandstuff = {
     email = "philip.g.potter@gmail.com";
     github = "philandstuff";
@@ -7562,6 +7592,12 @@
     github = "rht";
     githubId = 395821;
     name = "rht";
+  };
+  rhoriguchi = {
+    email = "ryan.horiguchi@gmail.com";
+    github = "rhoriguchi ";
+    githubId = 6047658;
+    name = "Ryan Horiguchi";
   };
   richardipsum = {
     email = "richardipsum@fastmail.co.uk";
@@ -8884,6 +8920,12 @@
     github = "teozkr";
     githubId = 649832;
     name = "Teo Klestrup Röijezon";
+  };
+  terin = {
+    email = "terinjokes@gmail.com";
+    github = "terinjokes";
+    githubId = 273509;
+    name = "Terin Stock";
   };
   terlar = {
     email = "terlar@gmail.com";
